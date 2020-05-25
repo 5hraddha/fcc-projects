@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Rubik:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container row">
+
+            <button class="nav-toggle" aria-label="open navigation" onclick="clickBtn()">
+                <span class="hamburger"></span>
+            </button>
+
+            <nav id="navbar" class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#welcome-section" class="nav__link nav__link--home">Home</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link nav__link--skills">Skills</a></li>
+                    <li class="nav__item"><a href="#projects" class="nav__link nav__link--works">Works</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link nav__link--contact">Contact Me</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- Hero section with height equal to that of the viewport -->
+    <main id="welcome-section" class="hero container">
+        <h1 class="hero__title">
+            Hey, am Shraddha!  <br> " Web Design & Development enthusiast "
+        </h1>
+        <div class="hero__img-container">
+            <img src="images/profile.jpg" alt="profile picture" class="hero__img">
+        </div>
+        <div class="hero__paragraph">
+            <p>Front-End Developer with hands-on experience</p>          
+            <button class="hero__hire-me">Hire Me</button>
+        </div>
+    </main>
+
+    <!-- skills section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section__title">Skills</h2>
+            <h3 class="section__subtitle">My technical expertise</h3>
+            <p class="section__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt modi dolore excepturi
+            at, perspiciatis, nobis fugiat suscipit possimus, illum sint quis earum consequuntur ipsum ad eius est reiciendis provident accusamus.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt modi dolore excepturi at, perspiciatis, nobis fugiat suscipit possimus, 
+            illum sint quis earum consequuntur ipsum ad eius est reiciendis provident accusamus.</p>
+            <div class="section__content skills__content">
+                <div>
+                    <p class="skills__icon">&#x2713;</p>
+                    <p>HTML</p>
+                </div>
+                <div>
+                    <p class="skills__icon">&#x2713;</p>
+                    <p>CSS</p>
+                </div>
+                <div>
+                    <p class="skills__icon">&#x2713;</p>
+                    <p> Javascript</p>
+                </div>
+                <div>
+                    <p class="skills__icon">&#x2713;</p>
+                    <p>Python Scripting</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- projects section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section__title">Works</h2>
+            <h3 class="section__subtitle">My projects and practice</h3>
+            <p class="section__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt modi dolore excepturi
+                at, perspiciatis, nobis fugiat suscipit possimus, illum sint quis earum consequuntur ipsum ad eius est reiciendis provident accusamus.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt modi dolore excepturi at, perspiciatis, nobis fugiat suscipit possimus, 
+                illum sint quis earum consequuntur ipsum ad eius est reiciendis provident accusamus.</p>
+            <div class="section__content projects__container">
+                    <p class="codepen" data-height="500px" data-theme-id="light" data-default-tab="result" data-user="5hraddha" data-slug-hash="wvKWBdq" style="height: 50em; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Tribute Page">
+                        <span>See the Pen <a href="https://codepen.io/5hraddha/pen/wvKWBdq">
+                        Tribute Page</a> by Shraddha (<a href="https://codepen.io/5hraddha">@5hraddha</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                    </p>
+
+                    <p class="codepen" data-height="500px" data-theme-id="light" data-default-tab="result" data-user="5hraddha" data-slug-hash="gOaLLGx" style="height: 50em; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Survey Form">
+                        <span>See the Pen <a href="https://codepen.io/5hraddha/pen/gOaLLGx">
+                        Survey Form</a> by Shraddha (<a href="https://codepen.io/5hraddha">@5hraddha</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                    </p>
+
+                    <p class="codepen" data-height="500px" data-theme-id="light" data-default-tab="result" data-user="5hraddha" data-slug-hash="pojGXYg" style="height: 50em; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="FCC - Technical Documentation">
+                        <span>See the Pen <a href="https://codepen.io/5hraddha/pen/pojGXYg">
+                        FCC - Technical Documentation</a> by Shraddha (<a href="https://codepen.io/5hraddha">@5hraddha</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                    </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section__title">Contact Me</h2>
+            <h3 class="section__subtitle">Drop a message</h3>
+            <form class="contact-form container">
+                <div class="contact-form__item">
+                    <label id="contact-form__name--lbl" for="contact-form__name">* Name</label>
+                    <input type="text" id="contact-form__name" placeholder="Name" required>
+                </div>
+                <div class="contact-form__item">
+                    <label id="contact-form__email--lbl" for="contact-form__email">* Email</label>
+                    <input type="email" id="contact-form__email" placeholder="Email" required>
+                </div>
+                <div class="contact-form__item">
+                    <label id="contact-form__msg--lbl" for="contact-form__msg">* Message for me</label>
+                    <textarea id="contact-form__msg" placeholder="Thankyou for leaving a message for me."></textarea>
+                </div>
+                <div class="contact-form__item">
+                    <button type="submit" class="contact-form__btn">Send</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- footer section -->
+    <footer class="footer">
+            <div class="footer__follow-me">
+                <div class="container row">
+                    <a href="https://github.com/5hraddha" class="follow-links"><i class="fa fa-github""></i></a>
+                    <a href="https://www.freecodecamp.org/shraddha_pooja" class="follow-links"><i class="fa fa-free-code-camp"></i></a>
+                    <a href="https://codepen.io/5hraddha" class="follow-links"><i class="fa fa-codepen"></i></a>
+                    <a href="https://twitter.com/shraddha_pooja" class="follow-links"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/tymless_treasures/" class="follow-links"><i class="fa fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer__creator-info">
+                <div class="container">
+                    <p>Created with &#x2764; by Shraddha</p>
+                </div>
+            </div>
+    </footer>
+    <script src="script.js"></script>
+    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+</body>
+</html>
