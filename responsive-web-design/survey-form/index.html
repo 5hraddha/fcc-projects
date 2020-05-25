@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <!-- Linking Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Allan:wght@400;700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="banner">
+        <header>
+            <h1 id="title">
+                <span class="ribbon">Navigators</span>
+                <span class="ribbon">2:7 Series</span>
+                <span class="ribbon">Survey</span>
+            </h1>
+        </header>
+    </div>
+
+    <div class="container">
+        <form id="survey-form">
+            <p id="description">The 2:7 Series® is a discipleship training curriculum done in small discussion groups.
+                People in training groups learn and practice skills while they experience spiritual growth. Each of its
+                three workbooks is an 11-week course led by a qualified leader/facilitator.</p>
+            <!--  Text Fields   -->
+            <fieldset>
+                <legend>
+                    Basic Information
+                </legend>
+                <div class="basic-info">
+                    <div class="form-item"><label id="name-label" for="name">* Name</label>
+                        <input type=text id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-item">
+                        <label id="email-label" for="email">* Email</label>
+                        <input type=email id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-item">
+                        <label id="number-label" for="number">* Age</label>
+                        <input type=number id="number" placeholder="Enter your age" min="18" max="120" required>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!--  Checkbox  -->
+            <fieldset>
+                <legend>Books Completed</legend>
+                <div class="suggestion">
+                    <label> Which books have you completed? (Check all that apply)</label>
+                    <div class="books">
+                        <div class="book">
+                            <img src="https://nav27series.org/wp-content/uploads/2019/05/Growing_Strong_Image.jpg">
+                            <div>
+                                <input type=checkbox id="book1" name="books" value="book-1" checked>
+                                <label id="book1-label" for="book1" name="books">Book 1: Growing Strong in God’s
+                                    Family</label>
+                            </div>
+                        </div>
+                        <div class="book">
+                            <img src="https://nav27series.org/wp-content/uploads/2019/05/Deepening_Roots_Image.jpg">
+                            <div>
+                                <input type=checkbox id="book2" name="books" value="book-2">
+                                <label id="book2-label" for="book2" name="books">Book 2: Deepening Your Roots in God’s
+                                    Family</label>
+                            </div>
+                        </div>
+                        <div class="book">
+                            <img src="https://nav27series.org/wp-content/uploads/2019/05/Bearing_Fruit_Image.jpg">
+                            <div>
+                                <input type=checkbox id="book3" name="books" value="book-3">
+                                <label id="book3-label" for="book3" name="books">Book 3: Bearing Fruit in God’s
+                                    Family</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!--  Star Ratings  -->
+            <fieldset>
+                <legend>Your Growth</legend>
+                <div class="suggestion">
+                    <label>How much this course have helped you to grow in these areas?</label>
+                    <div class="rating-container">
+                        <label>Obedience to Christ</label>
+                        <span class="star-cb-group">
+                            <input type="radio" id="obc-rating-5" name="obedience-to-christ" value="5" />
+                            <label for="obc-rating-5">5</label>
+                            <input type="radio" id="obc-rating-4" name="obedience-to-christ" value="4"
+                                checked="checked" />
+                            <label for="obc-rating-4">4</label>
+                            <input type="radio" id="obc-rating-3" name="obedience-to-christ" value="3" />
+                            <label for="obc-rating-3">3</label>
+                            <input type="radio" id="obc-rating-2" name="obedience-to-christ" value="2" />
+                            <label for="obc-rating-2">2</label>
+                            <input type="radio" id="obc-rating-1" name="obedience-to-christ" value="1" />
+                            <label for="obc-rating-1">1</label>
+                            <input type="radio" id="obc-rating-0" name="obedience-to-christ" value="0"
+                                class="star-cb-clear" />
+                            <label for="obc-rating-0">0</label>
+                        </span>
+                    </div>
+
+                    <div class="rating-container">
+                        <label>The Word</label>
+                        <span class="star-cb-group">
+                            <input type="radio" id="the-word-rating-5" name="the-word" value="5" />
+                            <label for="the-word-rating-5">5</label>
+                            <input type="radio" id="the-word-rating-4" name="the-word" value="4" checked="checked" />
+                            <label for="the-word-rating-4">4</label>
+                            <input type="radio" id="the-word-rating-3" name="the-word" value="3" />
+                            <label for="the-word-rating-3">3</label>
+                            <input type="radio" id="the-word-rating-2" name="the-word" value="2" />
+                            <label for="the-word-rating-2">2</label>
+                            <input type="radio" id="the-word-rating-1" name="the-word" value="1" />
+                            <label for="the-word-rating-1">1</label>
+                            <input type="radio" id="the-word-rating-0" name="the-word" value="0"
+                                class="star-cb-clear" />
+                            <label for="the-word-rating-0">0</label>
+                        </span>
+                    </div>
+
+                    <div class="rating-container">
+                        <label>Prayer</label>
+                        <span class="star-cb-group">
+                            <input type="radio" id="prayer-rating-5" name="prayer" value="5" />
+                            <label for="prayer-rating-5">5</label>
+                            <input type="radio" id="prayer-rating-4" name="prayer" value="4" checked="checked" />
+                            <label for="prayer-rating-4">4</label>
+                            <input type="radio" id="prayer-rating-3" name="prayer" value="3" />
+                            <label for="prayer-rating-3">3</label>
+                            <input type="radio" id="prayer-rating-2" name="prayer" value="2" />
+                            <label for="prayer-rating-2">2</label>
+                            <input type="radio" id="prayer-rating-1" name="prayer" value="1" />
+                            <label for="prayer-rating-1">1</label>
+                            <input type="radio" id="prayer-rating-0" name="prayer" value="0" class="star-cb-clear" />
+                            <label for="prayer-rating-0">0</label>
+                        </span>
+                    </div>
+
+                    <div class="rating-container">
+                        <label>Witnessing</label>
+                        <span class="star-cb-group">
+                            <input type="radio" id="witnessing-rating-5" name="witnessing" value="5" />
+                            <label for="witnessing-rating-5">5</label>
+                            <input type="radio" id="witnessing-rating-4" name="witnessing" value="4"
+                                checked="checked" />
+                            <label for="witnessing-rating-4">4</label>
+                            <input type="radio" id="witnessing-rating-3" name="witnessing" value="3" />
+                            <label for="witnessing-rating-3">3</label>
+                            <input type="radio" id="witnessing-rating-2" name="witnessing" value="2" />
+                            <label for="witnessing-rating-2">2</label>
+                            <input type="radio" id="witnessing-rating-1" name="witnessing" value="1" />
+                            <label for="witnessing-rating-1">1</label>
+                            <input type="radio" id="witnessing-rating-0" name="witnessing" value="0"
+                                class="star-cb-clear" />
+                            <label for="witnessing-rating-0">0</label>
+                        </span>
+                    </div>
+
+                    <div class="rating-container">
+                        <label>Fellowship</label>
+                        <span class="star-cb-group">
+                            <input type="radio" id="fellowship-rating-5" name="fellowship" value="5" />
+                            <label for="fellowship-rating-5">5</label>
+                            <input type="radio" id="fellowship-rating-4" name="fellowship" value="4"
+                                checked="checked" />
+                            <label for="fellowship-rating-4">4</label>
+                            <input type="radio" id="fellowship-rating-3" name="fellowship" value="3" />
+                            <label for="fellowship-rating-3">3</label>
+                            <input type="radio" id="fellowship-rating-2" name="fellowship" value="2" />
+                            <label for="fellowship-rating-2">2</label>
+                            <input type="radio" id="fellowship-rating-1" name="fellowship" value="1" />
+                            <label for="fellowship-rating-1">1</label>
+                            <input type="radio" id="fellowship-rating-0" name="fellowship" value="0"
+                                class="star-cb-clear" />
+                            <label for="fellowship-rating-0">0</label>
+                        </span>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!--  Dropdown  -->
+            <fieldset>
+                <legend>Rate Curriculum</legend>
+                <div class="suggestion">
+                    <label>How much do you rate the course series?</label>
+                    <select id="dropdown">
+                        <option>Excellent</option>
+                        <option>Very Good</option>
+                        <option>Good</option>
+                        <option>Okay</option>
+                        <option>Not Good</option>
+                    </select>
+                </div>
+                <div class="suggestion">
+                    <label>Would you recommend this course to your friends?</label>
+                    <div>
+                        <input type=radio name="recommend" id="recommend-yes" value="Y" checked>
+                        <label id="recommend-yes-label" for="recommend-yes">Yes</label>
+                        <input type=radio name="recommend" id="recommend-no" value="N">
+                        <label id="recommend-no-label" for="recommend-no">No</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!--  Text Area  -->
+            <fieldset>
+                <legend>Any Suggestions</legend>
+                <div class="suggestion">
+
+                    <label id="suggestions-label" for="suggestions">Any suggestions on how we can improve?</label>
+                    <textarea id="suggestions-label" placeholder="Thankyou for your suggestions.">
+        </textarea>
+                </div>
+
+            </fieldset>
+            <div class="btn-container">
+                <button id="submit" class="btn-submit"><span class="tick">&#10148;</span> Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- FCC CDN link to run the tests -->
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
