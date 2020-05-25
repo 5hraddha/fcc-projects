@@ -1,0 +1,307 @@
+/* Document level settings */
+
+:root {
+    --espresso-1: #ede9e7;
+    --espresso-2: #bf6a49;
+    --espresso-3: #e3c4b4;
+    --espresso-4: #170d08;
+    --white     : #ffffff;
+    --black     : #000000;
+    --bg-color  : #f2ecde;
+}
+
+html {
+    font-size: 17px;
+}
+
+@media (max-width: 900px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+/* Body level settings*/
+
+body {
+    margin     : 1rem;
+    background : repeating-linear-gradient( 45deg, var(--bg-color), var(--bg-color) 1px, var(--white) 5px, var(--white) 1px);
+    font-family: "Raleway", sans-serif;
+    color      : var(--espresso-4);
+}
+
+/* Main grid that includes other parts of the webpage:
+  head        : main heading of the page
+  pic         : picture of Billy Graham
+  content     : main section of the page
+  more-content: other section of the page
+  foot        : footer of the page*/
+
+.container {
+    display              : grid;
+    grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
+    grid-template-areas  : "head" "img-div" "content" "more-content" "foot";
+    max-width            : 80%;
+    margin               : 0 auto;
+    font-size            : 1em;
+    /*   justify-items: center;
+    align-items: center; */
+}
+
+.head {
+    grid-area  : head;
+    font-family: "Inknut Antiqua", serif;
+    font-size  : 1.2rem;
+    padding    : 0 5em;
+}
+
+h1 {
+    margin        : -0.6em;
+    font-size     : 3em;
+    color         : var(--espresso-2);
+    text-shadow   : 1px 4px var(--black);
+    text-align    : center;
+    text-transform: uppercase;
+}
+
+.sub-heading {
+    text-align           : center;
+    display              : grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows   : 20px;
+    grid-gap             : 10px;
+    align-items          : center;
+}
+
+.sub-heading:after, .sub-heading:before {
+    content      : " ";
+    display      : block;
+    border-top   : 1px solid var(--espresso-2);
+    border-bottom: 1px solid var(--espresso-2);
+    height       : 3px;
+}
+
+header {
+    width: 100%;
+}
+
+.img-div {
+    grid-area   : img-div;
+    justify-self: center;
+    align-self  : center;
+    position    : relative;
+    font-size   : 1em;
+}
+
+#image {
+    display         : block;
+    max-width       : 100%;
+    width           : auto;
+    height          : auto;
+    margin          : auto;
+    padding         : 1px;
+    border          : 3px solid var(--black);
+    background-color: var(--espresso-2);
+    border-radius   : 5px;
+}
+
+.img-div #img-caption {
+    box-sizing      : border-box;
+    opacity         : 0;
+    position        : absolute;
+    width           : 100%;
+    bottom          : 0px;
+    left            : 3px;
+    padding         : 0.5rem;
+    background-color: var(--espresso-2);
+    color           : var(--white);
+}
+
+.img-div #img-caption:hover {
+    opacity: 0.5;
+}
+
+.image-quote-1 {
+    position     : absolute;
+    padding      : 0.5rem 0;
+    top          : 2rem;
+    left         : 4rem;
+    width        : max-content;
+    font-size    : 1rem;
+    line-height  : 1.5rem;
+    border-bottom: solid 1px var(--espresso-2);
+    color        : var(--white);
+}
+
+.image-quote-1 p {
+    margin: 0;
+}
+
+.image-quote-1 p::before {
+    content    : open-quote;
+    font-family: "Inknut Antiqua", serif;
+    color      : var(--espresso-2);
+}
+
+.image-quote-1 p::after {
+    content    : close-quote;
+    font-family: "Inknut Antiqua", serif;
+    color      : var(--espresso-2);
+}
+
+.image-quote-2 {
+    position   : absolute;
+    padding    : 1rem 0;
+    top        : 10rem;
+    left       : 4rem;
+    font-size  : 1rem;
+    line-height: 1.5rem;
+    width      : max-content;
+    color      : var(--white);
+}
+
+.content {
+    grid-area : content;
+    font-size : 1rem;
+    text-align: justify;
+}
+
+blockquote {
+    background : var(--espresso-1);
+    border-left: 1rem solid var(--espresso-2);
+    margin     : 1.5em 0.8rem;
+    padding    : 1.5em 1rem;
+    quotes     : "“" "”";
+}
+
+blockquote:before {
+    color         : var(--espresso-2);
+    content       : open-quote;
+    font-size     : 4em;
+    line-height   : 0.1em;
+    margin-right  : 0.25em;
+    vertical-align: -0.4em;
+}
+
+.more-content {
+    grid-area            : more-content;
+    font-size            : 0.85rem;
+    grid-gap             : 1rem;
+    display              : grid;
+    grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
+    grid-template-areas  : "col-1 col-2 col-3" "col-4 col-5 col-6";
+}
+
+@media (max-width: 1000px) {
+    .more-content {
+        grid-template-areas: "col-1 col-2" "col-3 col-4" "col-5 col-6";
+    }
+}
+
+@media (max-width: 700px) {
+    .more-content {
+        grid-template-areas: "col-1" "col-2" "col-3" "col-4" "col-5" "col-6";
+    }
+}
+
+.more-content div {
+    padding              : 0.2em 1em;
+    text-align           : justify;
+    display              : grid;
+    grid-template-columns: repeat(autofit, minmax(auto, 1fr));
+    grid-template-rows   : 6em auto;
+    grid-template-areas  : "title" "text";
+    border               : var(--espresso-2) 2px dotted;
+    border-radius        : 8px;
+}
+
+.more-content-col-1 {
+    grid-area: col-1;
+}
+
+.more-content-col-2 {
+    grid-area: col-2;
+}
+
+.more-content-col-3 {
+    grid-area: col-3;
+}
+
+.more-content-col-4 {
+    grid-area: col-4;
+}
+
+.more-content-col-5 {
+    grid-area: col-5;
+}
+
+.more-content-col-6 {
+    grid-area: col-6;
+}
+
+.card-title {
+    grid-area       : title;
+    background-color: var(--espresso-4);
+    color           : var(--white);
+    text-align      : center;
+    padding         : 0.8em;
+    border-radius   : 8px;
+    box-shadow      : 0 -20px 15px -10px rgba(227, 196, 180, 0.3) inset, 0 20px 15px -10px rgba(227, 196, 180, 0.3) inset, 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-text {
+    grid-area: text;
+}
+
+.fa {
+    font-size      : 1em;
+    text-align     : center;
+    text-decoration: none;
+    border-radius  : 50%;
+}
+
+.fa-twitter {
+    background: transparent;
+    color     : var(--espresso-2);
+}
+
+.foot {
+    grid-area : foot;
+    font-size : 0.75rem;
+    padding   : 0.5em;
+    margin    : 1em 0;
+    border-top: solid 1px var(--espresso-2);
+}
+
+footer {
+    display              : grid;
+    grid-template-columns: repeat(autofit, minmax(auto, 1fr));
+    grid-template-areas  : "sources info";
+}
+
+footer div {
+    padding: 1em 0;
+}
+
+footer div:nth-of-type(1) {
+    text-align: left;
+}
+
+footer div:nth-of-type(2) {
+    text-align: right;
+}
+
+.box {
+    padding: 0.5em;
+}
+
+.bold {
+    font-weight: bold;
+    color      : var(--black);
+    text-shadow: 1.5px 0px var(--espresso-3);
+}
