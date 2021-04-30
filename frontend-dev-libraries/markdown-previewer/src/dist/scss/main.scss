@@ -1,0 +1,160 @@
+@import "config";
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+//Variables
+$darkColor: #276a90;
+$lightColor: #e8f5fc;
+$bgColor: #0aabf4;
+$font: 'Source Code Pro', monospace;
+$shadow: 1px 1px 10px 0.5px darken($bgColor, 20%);
+$default-border: 1px solid darken($bgColor, 35%);
+
+//Mixins
+@mixin set-background-color{
+    background-color: #fff;
+    opacity: 1;
+    background-image:  radial-gradient(#0aabf4 1.25px, transparent 1.25px), radial-gradient(#0aabf4 1.25px, #fff 1.25px);
+    background-size: 50px 50px;
+    background-position: 0 0,25px 25px;
+}
+
+body {
+    @include set-background-color;
+    margin: 10px 0;
+}
+
+.header {
+    color: $darkColor;
+    text-align: center;
+    padding: 1rem 1rem 0.5rem 1rem;
+    text-decoration: underline;
+}
+
+.directions {
+    margin-bottom: 2rem;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.footer {
+    color: $darkColor;
+    text-align: center;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.toolbar {
+    position: relative;
+    background-color: lighten($darkColor, 25%);
+    color: white;
+    padding: 4px 4px 3px 3px;
+    border: $default-border;
+    box-shadow: $shadow;
+    font-family: $font;
+    font-size: 15px;
+    i {
+        width: 25px;
+        margin-left: 5px;
+    }
+    .fa-expand-arrows-alt,
+    .fa-compress-arrows-alt {
+        position: absolute;
+        top: 7px;
+        right: -4px;
+    }
+}
+
+.fa-compress-arrows-alt,
+.fa-expand-arrows-alt {
+    &:hover {
+        color: $lightColor;
+        cursor: pointer;
+    }
+}
+
+.fa-code {
+    margin-right: 3px;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.colorScheme {
+    background-color: lighten($bgColor, 40%);
+    border: $default-border;
+    box-shadow: $shadow;
+    border-top: none;
+}
+
+.markdownEditor {
+    width: 50vw;
+    margin-left: 5vw;
+    .toolbar {
+        width: 99%;
+    }
+    textarea {
+        @extend .colorScheme;
+        width: 99%;
+        height: 77.2vh;
+        margin-bottom: -5px;
+        resize: vertical;
+        outline: none;
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+}
+
+.markdownPreviewer {
+    @extend .colorScheme;
+    width: 50vw;
+    margin-right: 5vw;
+    height: 80.5vh;
+    .toolbar {
+        width: 100%;
+    }
+    #preview {
+        width: 100%;
+        height: 77vh;
+        overflow: scroll;
+        overflow-wrap: break-word;
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    } 
+}
+
+.maximised {
+    width: 95vw;
+    min-height: 86vh;
+    textarea {
+        min-height: 83vh;
+        resize: none;
+    }
+    #preview {
+        height: 82vh;
+    }
+    
+}
+
+#preview {
+    pre {
+        background-color: $lightColor;
+        padding: 1rem;
+    }
+
+    blockquote {
+        background-color: $lightColor;
+        border-left: solid $bgColor 0.5rem;
+        padding-left: 0.5rem;
+    }
+
+    a {
+        color: $darkColor;
+    }
+
+    img {
+        width: 50%;
+    }
+}
+
+

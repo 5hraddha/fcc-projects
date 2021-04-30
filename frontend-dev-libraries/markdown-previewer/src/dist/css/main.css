@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #fff;
+  opacity: 1;
+  background-image: radial-gradient(#0aabf4 1.25px, transparent 1.25px), radial-gradient(#0aabf4 1.25px, #fff 1.25px);
+  background-size: 50px 50px;
+  background-position: 0 0,25px 25px;
+  margin: 10px 0;
+}
+
+.header {
+  color: #276a90;
+  text-align: center;
+  padding: 1rem 1rem 0.5rem 1rem;
+  text-decoration: underline;
+}
+
+.directions {
+  margin-bottom: 2rem;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.footer {
+  color: #276a90;
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.toolbar {
+  position: relative;
+  background-color: #62abd4;
+  color: white;
+  padding: 4px 4px 3px 3px;
+  border: 1px solid #033349;
+  -webkit-box-shadow: 1px 1px 10px 0.5px #066692;
+          box-shadow: 1px 1px 10px 0.5px #066692;
+  font-family: "Source Code Pro", monospace;
+  font-size: 15px;
+}
+
+.toolbar i {
+  width: 25px;
+  margin-left: 5px;
+}
+
+.toolbar .fa-expand-arrows-alt,
+.toolbar .fa-compress-arrows-alt {
+  position: absolute;
+  top: 7px;
+  right: -4px;
+}
+
+.fa-compress-arrows-alt:hover,
+.fa-expand-arrows-alt:hover {
+  color: #e8f5fc;
+  cursor: pointer;
+}
+
+.fa-code {
+  margin-right: 3px;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.colorScheme, .markdownEditor textarea, .markdownPreviewer {
+  background-color: #cdeefd;
+  border: 1px solid #033349;
+  -webkit-box-shadow: 1px 1px 10px 0.5px #066692;
+          box-shadow: 1px 1px 10px 0.5px #066692;
+  border-top: none;
+}
+
+.markdownEditor {
+  width: 50vw;
+  margin-left: 5vw;
+}
+
+.markdownEditor .toolbar {
+  width: 99%;
+}
+
+.markdownEditor textarea {
+  width: 99%;
+  height: 77.2vh;
+  margin-bottom: -5px;
+  resize: vertical;
+  outline: none;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.markdownPreviewer {
+  width: 50vw;
+  margin-right: 5vw;
+  height: 80.5vh;
+}
+
+.markdownPreviewer .toolbar {
+  width: 100%;
+}
+
+.markdownPreviewer #preview {
+  width: 100%;
+  height: 77vh;
+  overflow: scroll;
+  overflow-wrap: break-word;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.maximised {
+  width: 95vw;
+  min-height: 86vh;
+}
+
+.maximised textarea {
+  min-height: 83vh;
+  resize: none;
+}
+
+.maximised #preview {
+  height: 82vh;
+}
+
+#preview pre {
+  background-color: #e8f5fc;
+  padding: 1rem;
+}
+
+#preview blockquote {
+  background-color: #e8f5fc;
+  border-left: solid #0aabf4 0.5rem;
+  padding-left: 0.5rem;
+}
+
+#preview a {
+  color: #276a90;
+}
+
+#preview img {
+  width: 50%;
+}
+/*# sourceMappingURL=main.css.map */
